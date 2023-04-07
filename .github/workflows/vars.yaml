@@ -24,6 +24,6 @@ jobs:
       - name: print something from the payload
         run: echo "${PUSHER} pushes this their email is ${EMAIL}"
         env:
-          PUSHER: ${{ github.evet.pusher.name }}
-          EMAIL: ${{ github.evet.pusher.email }}
+          PUSHER: ${{ github.event.pusher.name }}
+          EMAIL: ${{ github.event.pusher.email }}
         
