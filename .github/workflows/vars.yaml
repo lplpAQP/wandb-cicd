@@ -21,4 +21,9 @@ jobs:
         run: echo "PAYLOAD:\n${PAYLOAD}\n"
         env:
           PAYLOAD: ${{ toJSON(github.event) }}
+      - name: print something from the payload
+        run: echo "${PUSHER} pushes this their email is ${EMAIL}"
+        env:
+          PUSHER: ${{ github.evet.pusher.name }}
+          EMAIL: ${{ github.evet.pusher.email }}
         
